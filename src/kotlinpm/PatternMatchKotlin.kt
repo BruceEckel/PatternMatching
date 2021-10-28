@@ -9,11 +9,6 @@ data class Glider(val size: Int): Transport
 
 data class Surfboard(val weight: Double): Transport
 
-// If you uncomment this:
-// data class Skis(val length: Int): Transport
-// You get an error: "'when' expression must be exhaustive,
-// add necessary 'is Skis' branch or 'else' branch
-
 fun exhaustive(t: Transport): String = when (t) {
     is Bicycle -> "Bicycle " + t.id
     is Glider -> "Glider " + t.size
@@ -27,3 +22,8 @@ fun main() {
         Surfboard (6.4),
     ).forEach { println(exhaustive(it)) }
 }
+
+// If you uncomment this:
+// data class Skis(val length: Int): Transport
+// You get an error: "'when' expression must be exhaustive,
+// add necessary 'is Skis' branch or 'else' branch

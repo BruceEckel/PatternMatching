@@ -14,11 +14,6 @@ record Glider(int size) implements Transport {}
 
 record Surfboard(double weight) implements Transport {}
 
-// If you uncomment this:
-// record Skis(int length) implements Transport {};
-// You get an error: "the switch expression
-// does not cover all possible input values"
-
 public class PatternMatchJava {
     static String exhaustive(Transport t) {
         return switch (t) {
@@ -41,3 +36,8 @@ public class PatternMatchJava {
         }
     }
 }
+
+// If you uncomment this:
+// record Skis(int length) implements Transport {};
+// You get an error: "the switch expression
+// does not cover all possible input values"
