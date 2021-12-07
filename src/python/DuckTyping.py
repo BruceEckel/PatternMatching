@@ -1,4 +1,4 @@
-# https://github.com/BruceEckel/PatternMatching
+# https://github.com/BruceEckel/PatternMatching/src/python
 # DuckTyping.py
 from dataclasses import dataclass
 
