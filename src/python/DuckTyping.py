@@ -1,6 +1,7 @@
 # https://github.com/BruceEckel/PatternMatching/src/python
 # DuckTyping.py
 from dataclasses import dataclass
+from typing import Any
 
 @dataclass(frozen=True)
 class Bicycle:
@@ -22,7 +23,7 @@ class Skis:
     length: int
     def display(self) -> str: return f"Glider {self.length}"
 
-def exhaustive(t) -> str:
+def exhaustive(t: Any) -> str:
     return t.display()
 
 [print(exhaustive(it)) for it in
