@@ -21,14 +21,15 @@ class Surfboard(Transport):
 @dataclass(frozen=True)
 class Skis(Transport):
     length: int
+    def additional(self) -> str: return "additional!"
 
-def exhaustive(t: Transport) -> str:
+def show(t: Transport) -> str:
     # (t: Bicycle | Glider | Surfboard | Skis)
     match t:
         case Bicycle() as b: return f"Bicycle {b.id}"
         case Glider() as g: return f"Glider {g.size}"
         case Surfboard() as s: return f"Surfboard {s.weight}"
-        case Skis() as s: return f"Skis {s.length}"
+        case Skis() as s: return f"Skis {s.length} {s.additional()}"
 
-[print(exhaustive(it)) for it in
-   [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]
+[print(show(it)) for it in
+    [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]

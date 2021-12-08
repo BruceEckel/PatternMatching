@@ -26,9 +26,9 @@ class Surfboard(Transport):
 class Skis(Transport):
     length: int
     def display(self) -> str: return f"Skis {self.length}"
+    def additional(self) -> str: return "not available from base"
 
-def exhaustive(t: Transport) -> str:
-    return t.display()
+def show(t: Transport) -> str: return t.display()
 
-[print(exhaustive(it)) for it in
-   [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]
+[print(show(it)) for it in
+    [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]

@@ -23,8 +23,7 @@ class Skis:
     length: int
     def display(self) -> str: return f"Skis {self.length}"
 
-def exhaustive(t: Any) -> str:
-    return t.display()
+def show(t: Any) -> str: return t.display()
 
-[print(exhaustive(it)) for it in
-   [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]
+[print(show(it)) for it in
+    [Bicycle("Bob"), Glider(65), Surfboard(6.4), Skis(72)]]
