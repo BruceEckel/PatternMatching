@@ -1,5 +1,5 @@
-# https://github.com/BruceEckel/PatternMatching/src/python
-# DuckTyping.py
+# 2. DuckTyping.py
+# Disjoint classes containing a common operation
 from dataclasses import dataclass
 from typing import Any
 
@@ -16,12 +16,12 @@ class Glider:
 @dataclass(frozen=True)
 class Surfboard:
     weight: float
-    def display(self) -> str: return f"Glider {self.weight}"
+    def display(self) -> str: return f"Surfboard {self.weight}"
 
 @dataclass(frozen=True)
 class Skis:
     length: int
-    def display(self) -> str: return f"Glider {self.length}"
+    def display(self) -> str: return f"Skis {self.length}"
 
 def exhaustive(t: Any) -> str:
     return t.display()

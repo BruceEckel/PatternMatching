@@ -1,5 +1,5 @@
-# https://github.com/BruceEckel/PatternMatching/src/python
-# PatternMatch.py
+# 3. PatternMatch.py
+# Disjoint classes passed as a type union, using pattern matching
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
